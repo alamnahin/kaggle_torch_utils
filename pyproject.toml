@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaggle-torch-utils"
+version = "0.1.0"
+description = "Reusable PyTorch training utilities for Kaggle notebooks and beyond."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    {name = "Md. Nahin Alam", email = "nahin.alam@northsouth.edu"},
+]
+keywords = ["pytorch", "kaggle", "training", "deep-learning", "utilities"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.10",
+    "numpy>=1.20",
+]
+
+[project.optional-dependencies]
+metrics = [
+    "scikit-learn>=1.0",
+]
+full = [
+    "scikit-learn>=1.0",
+    "timm>=0.6",
+    "ptflops>=0.7",
+    "matplotlib>=3.3",
+    "tqdm>=4.50",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/alamnahin/kaggle-torch-utils"
+Repository = "https://github.com/alamnahin/kaggle-torch-utils"
+
+[tool.setuptools.packages.find]
+include = ["kaggle_torch_utils*"]
