@@ -16,7 +16,7 @@ Optional (requires scikit-learn):
     metrics        - Classification metrics computation
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 # Reproducibility
 from .reproducibility import set_seed, worker_init_fn

@@ -179,7 +179,7 @@ class CheckpointManager:
 
         shutil.copy2(best_ckpt_path, model_dir / "best_model.pth")
 
-        best_ckpt = torch.load(best_ckpt_path, map_location="cpu")
+        best_ckpt = torch.load(best_ckpt_path, map_location="cpu", weights_only=False)
         if isinstance(best_ckpt, dict) and model_key in best_ckpt:
             torch.save(best_ckpt[model_key], model_dir / "model_weights_only.pth")
 
